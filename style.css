@@ -1,3 +1,10 @@
+.pointerArea {
+  height: 100px;
+  width: 100px; }
 
+.pointer {
+  width: 5px;
+  height: 5px;
+  background-color: blue; }
 
 /*# sourceMappingURL=style.css.map */
