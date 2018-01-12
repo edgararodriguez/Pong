@@ -1,10 +1,15 @@
 .pointerArea {
+  cursor: none;
   height: 100px;
   width: 100px; }
 
-.pointer {
+#pointer {
+  position: fixed;
   width: 5px;
   height: 5px;
   background-color: blue; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
