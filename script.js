@@ -1,12 +1,15 @@
 var shake1 = 0;
 var shake2 = 0;
+var mousex = 0;
+var mousey = 0;
+var start;
 function follow() {
-	var pointer = document.getElementById('pointer');
-	var x = event.clientX + (Math.random()*shake1);
-    var y = event.clientY + (Math.random()*shake1);
-    pointer.style.left = x +'px';
-    pointer.style.top = y +'px';
-    console.log(x)
+	mousex = event.clientX;
+	mousey = event.clientY;
+	console.log(mousex)
+}
+function stop() {
+	clearInterval(move())
 }
 function bounce() {
 	var pointer = document.getElementById('pointer');

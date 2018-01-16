@@ -5,14 +5,18 @@ body {
   background-position: center; }
 
 .pointerArea {
+  position: fixed;
+  left: 520px;
+  top: 85px;
+  border: 2px solid red;
   cursor: none;
-  height: 100px;
-  width: 100px; }
+  height: 650px;
+  width: 400px; }
 
 #pointer {
   position: fixed;
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background-color: blue; }
 
 .hide {

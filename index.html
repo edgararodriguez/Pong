@@ -7,8 +7,15 @@
   <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-  <div class="pointerArea" onmousemove="follow()" onclick="start()">
-    <div id="pointer">
+  <div class="pointerArea" onmouseover="start = setInterval(function move() {
+	var pointer = document.getElementById('pointer');
+	var x = mousex + (((Math.random()-.5)*2)*(shake1));
+    var y = mousey + (((Math.random()-.5)*2)*(shake1));
+    pointer.style.left = x +'px';
+    pointer.style.top = y +'px';
+    console.log()
+},1)"  onmouseout="clearInterval(start)" onmousemove="follow()">
+  	<div id="pointer">
     </div>
   </div>
   <div id="ball">
