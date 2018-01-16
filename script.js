@@ -1,4 +1,4 @@
-var shake1 = 0;
+var shake1 = 50;
 var shake2 = 0;
 var mousex = 0;
 var mousey = 0;
@@ -17,9 +17,11 @@ function bounce() {
 	var dif = pointer.getBoundingClientRect().left - ball.getBoundingClientRect().left;
 	return (dif*1.6)
 }
-function click() {
+function caleb() {
+	console.log('stop');
 	console.log(bounce());
-	clearInterval(start);}
+	clearInterval(start);
+}
 function remove(cup, player) {
 	document.getElementById(cup).classList.add("hide");
 	if(player === 1) {
