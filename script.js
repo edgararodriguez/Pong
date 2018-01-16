@@ -17,9 +17,9 @@ function bounce() {
 	var dif = pointer.getBoundingClientRect().left - ball.getBoundingClientRect().left;
 	return (dif*1.6)
 }
-function start() {
+function click() {
 	console.log(bounce());
-}
+	clearInterval(start);}
 function remove(cup, player) {
 	document.getElementById(cup).classList.add("hide");
 	if(player === 1) {
