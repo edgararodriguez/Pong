@@ -1,43 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>home</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
+  	<meta charset='utf-8'>
+  	<title> Pong </title>
+  	<link rel='stylesheet' href='style.css'>
+  	<script src="script.js"></script>
+ 	<meta name=viewport content='width=device-width, initial-scale=1'>
 </head>
-<body>
-  <div class="pointerArea" onmousemove="follow()" onclick="start()">
-    <div id="pointer">
-    </div>
-  </div>
-  <div id="ball">
-  </div>
-  <div id='cup1' class="cupstyle">
-  </div>
-  <div id='cup2' class="cupstyle">
-  </div>
-  <div id='cup3' class="cupstyle">
-  </div>
-  <div id= 'cup4' class="cupstyle">
-  </div>
-  <div id= 'cup5' class="cupstyle">
-  </div>
-  <div id= 'cup6' class="cupstyle">
-  </div>
-  <div id= 'cup7' class="cupstyle">
-  </div>
-  <div id= "cup8" class="cupstyle">
-  </div>
-  <div id= "cup9" class="cupstyle">
-  </div>
-  <div id= "cup10" class="cupstyle">
-  </div>
-  <input class="score">
-</input>
-  <header>
-  </header>
-  <footer>
-  </footer>
+<body onload="start()">
+	<div id="ball">
+	</div>
+	<div id="paddle">
+	</div>
+	<input type="text" id="controls" onkeydown="shift()" autofocus>
+	<input type="text" id="score">
 </body>
 </html>
