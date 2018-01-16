@@ -1,4 +1,4 @@
-var shake1 = 50;
+var shake1 = 0;
 var shake2 = 0;
 var mousex = 0;
 var mousey = 0;
@@ -6,20 +6,23 @@ var start;
 function follow() {
 	mousex = event.clientX;
 	mousey = event.clientY;
-	console.log(mousex)
 }
 function stop() {
 	clearInterval(move())
 }
 function bounce() {
-	var pointer = document.getElementById('pointer');
 	var ball = document.getElementById('ball');
+	var bh = ball.getBoundingClientRect().top;
+	console.log(bh);
+	var pointer = document.getElementById('pointer');
 	var dif = pointer.getBoundingClientRect().left - ball.getBoundingClientRect().left;
-	return (dif*1.6)
+	ball.classList.add("pingpongballmove");
+	ball.style.left = (pointer.getBoundingClientRect().left-ball.getBoundingClientRect().width/2)*1.6+'px';
+	ball.style.top = (pointer.getBoundingClientRect().top+pointer.getBoundingClientRect().top-bh-ball.getBoundingClientRect().height)+'px';
+	//return [dif, (dif*1.6)]
 }
 function caleb() {
-	console.log('stop');
-	console.log(bounce());
+	bounce();
 	clearInterval(start);
 }
 function remove(cup, player) {
