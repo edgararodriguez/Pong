@@ -5,12 +5,18 @@ body {
   background-position: center; }
 
 .pointerArea {
-  height: 100px;
-  width: 100px; }
+  position: fixed;
+  left: 520px;
+  top: 85px;
+  border: 2px solid red;
+  cursor: none;
+  height: 650px;
+  width: 400px; }
 
-.pointer {
-  width: 5px;
-  height: 5px;
+#pointer {
+  position: fixed;
+  width: 10px;
+  height: 10px;
   background-color: blue; }
 
 .cupstyle {
@@ -21,27 +27,36 @@ body {
   border: 1px solid red;
   position: fixed; }
 
+.pingpongballmove {
+  top: 0px;
+  left: 0px; }
+
 .pingpongball {
   height: 100px;
   width: 100px;
   position: fixed;
   top: 350px;
   left: 100px;
-  transform: scale(1, 1);
+  transition: left 1s, top 1s;
+  transition-timing-function: linear;
+  transition-timing-function: linear;
+  transition: left 1s, top 1s;
+  transform: scale(1, 1);		 
   animation-name: ballsize;
   animation-duration: 2s; }
 
-@keyframes ballsize {
-  0% {
-    transform: scale(1, 1); }
-  25% {
-    transform: scale(0.5, 0.5); }
-  50% {
-    transform: scale(1, 1); }
-  75% {
-    transform: scale(0.5, 0.5); }
-  100% {
+ @keyframes ballsize {		
+  0% {		
+    transform: scale(1, 1); }		
+  25% {		
+    transform: scale(0.5, 0.5); }		
+  50% {		
+    transform: scale(1, 1); }		
+  75% {		
+    transform: scale(0.5, 0.5); }		
+  100% {		
     transform: scale(0.5, 0.5); } }
+
 #cup1 {
   top: 510px;
   left: 1250px; }
