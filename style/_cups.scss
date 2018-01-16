@@ -21,12 +21,18 @@ body {
   border: 1px solid red;
   position: fixed;
 }
+.pingpongballmove{
+  top: 0px;
+  left: 0px;
+}
 .pingpongball{
   height: 100px;
   width: 100px;
   position: fixed;
   top: 350px;
   left: 100px;
+  transition: left 1s, top 1s;
+  transition-timing-function: linear;
   transform: scale(1, 1);
   animation-name: ballsize;
   animation-duration: 2s;
