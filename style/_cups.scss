@@ -5,12 +5,18 @@ body {
     background-position: center;
   }
 .pointerArea{
-  height: 100px;
-  width: 100px;
+  position: fixed;
+  left: 520px;
+  top: 85px;
+  border: 2px solid red;
+  cursor: none;
+  height: 650px;
+  width: 400px;
 }
-.pointer{
-  width: 5px;
-  height: 5px;
+#pointer {
+  position: fixed;
+  width: 10px;
+  height: 10px;
   background-color: blue;
 }
 .cupstyle{
