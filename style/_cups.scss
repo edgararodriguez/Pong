@@ -19,9 +19,6 @@ body {
   height: 10px;
   background-color: blue;
 }
-.hide {
-	display: none;
-}
 .cupstyle{
   border-radius: 50%;
   background: linear-gradient(-45deg, lightgray, lightgray 10%, white);
@@ -29,6 +26,13 @@ body {
   width: 69px;
   border: 1px solid red;
   position: fixed;
+}
+.pingpongball{
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 350px;
+  left: 100px;
 }
 #cup1{
   top: 510px;
