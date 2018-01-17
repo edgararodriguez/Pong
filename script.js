@@ -2,6 +2,7 @@ var shake1 = 10;
 var shake2 = 0;
 var mousex = 0;
 var mousey = 0;
+var player = 1;
 var start;
 function follow() {
 	mousex = event.clientX;
@@ -19,10 +20,30 @@ function bounce() {
 	ball.classList.add("pingpongballmove");
 	ball.style.left = (pointer.getBoundingClientRect().left-ball.getBoundingClientRect().width/2)*1.6+'px';
 	ball.style.top = (pointer.getBoundingClientRect().top+pointer.getBoundingClientRect().top-bh-ball.getBoundingClientRect().height)+'px';
+	//wait(4000);
 }
 function caleb() {
 	bounce();
 	clearInterval(start);
+}
+function setup() {
+	if (player === 1) {
+		for (i=0; i<list1.length; i++) {
+			if (list1[i] === "") {
+				document.getElementById(list[i]).classList.add("hide");
+			} else {
+				document.getElementById(list[i]).classList.remove("hide");
+			}
+		}
+	} else {
+		for (i=0; i<list2.length; i++) {
+			if (list2[i] === "") {
+				document.getElementById(list[i]).classList.add("hide");
+			} else {
+				document.getElementById(list[i]).classList.remove("hide");
+			}
+		}
+	}
 }
 function remove(cup, player) {
 	document.getElementById(cup).classList.add("hide");
