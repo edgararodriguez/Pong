@@ -20,10 +20,6 @@ function hitzone(x, y) {
 	var mid = ball.getBoundingClientRect().width/2;
 	var boundR = x+60;
 	var boundB = y+60;
-	console.log(boundR);
-	console.log(boundB);
-	console.log(ball.getBoundingClientRect().left+mid);
-	console.log(ball.getBoundingClientRect().top+mid);
 	if (ball.getBoundingClientRect().left+mid > x && ball.getBoundingClientRect().left+mid < boundR && ball.getBoundingClientRect().top+mid > y && ball.getBoundingClientRect().top+mid < boundB) {
 		return (true);
 	} else {
@@ -38,11 +34,13 @@ function bounce() {
 	ball.classList.add("pingpongballmove");
 	ball.style.left = (pointer.getBoundingClientRect().left-ball.getBoundingClientRect().width/2)*1.6+'px';
 	ball.style.top = (pointer.getBoundingClientRect().top+pointer.getBoundingClientRect().top-bh-ball.getBoundingClientRect().height)+'px';
-	setTimeout (edgar,5000)
+	setTimeout (edgar,4000)
 }
 function edgar(){
 	for (i = 0; i < list.length; i++) {
-		console.console.log(hitzone(document.getElementById(list[i]).getBoundingClientRect().left, document.getElementById(list[i]).getBoundingClientRect().top))
+		if (hitzone(document.getElementById(list[i]).getBoundingClientRect().left, document.getElementById(list[i]).getBoundingClientRect().top) === true) {
+			remove(list[i],(i+1));
+		}
 	}
 }
 function caleb() {
@@ -90,4 +88,5 @@ function remove(cup, cupnumber) {
 		shake2 = shake2 + 5;
 		list2[cupnumber] = ''
 	}
+	endround();
 }
