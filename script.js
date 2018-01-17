@@ -38,12 +38,13 @@ function bounce() {
 	ball.classList.add("pingpongballmove");
 	ball.style.left = (pointer.getBoundingClientRect().left-ball.getBoundingClientRect().width/2)*1.6+'px';
 	ball.style.top = (pointer.getBoundingClientRect().top+pointer.getBoundingClientRect().top-bh-ball.getBoundingClientRect().height)+'px';
-	//settimeout(edgar, 5000)
+	setTimeout (edgar,5000)
 }
-//function edgar{
-	//create a for loop to check if its on top of the cups
-	//run the remove cup
-//}
+function edgar(){
+	for (i = 0; i < list.length; i++) {
+		console.console.log(hitzone(document.getElementById(list[i]).getBoundingClientRect().left, document.getElementById(list[i]).getBoundingClientRect().top))
+	}
+}
 function caleb() {
 	bounce();
 	clearInterval(start);
