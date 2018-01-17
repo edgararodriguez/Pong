@@ -23,9 +23,9 @@ function bounce() {
 	ball.classList.add("pingpongballmove");
 	ball.style.left = (pointer.getBoundingClientRect().left-ball.getBoundingClientRect().width/2)*1.6+'px';
 	ball.style.top = (pointer.getBoundingClientRect().top+pointer.getBoundingClientRect().top-bh-ball.getBoundingClientRect().height)+'px';
-	//wait 4 sec
-	//get balls final position
-	//hit zone for ball to count
+function edgar() {
+	window.setTimeout (edgar,1000)
+}
 	//create a for loop to check if its on top of the cups
 	//run the remove cup
 }
