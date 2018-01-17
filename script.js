@@ -23,16 +23,22 @@ function bounce() {
 	ball.classList.add("pingpongballmove");
 	ball.style.left = (pointer.getBoundingClientRect().left-ball.getBoundingClientRect().width/2)*1.6+'px';
 	ball.style.top = (pointer.getBoundingClientRect().top+pointer.getBoundingClientRect().top-bh-ball.getBoundingClientRect().height)+'px';
-	//wait(4000);
+	//wait 4 sec
+	//get balls final position
+	//hit zone for ball to count
+	//create a for loop to check if its on top of the cups
+	//run the remove cup
 }
 function caleb() {
 	bounce();
 	clearInterval(start);
 }
 function setup() {
+	console.log('start');
 	if (player === 1) {
 		for (i=0; i<list1.length; i++) {
-			if (list1[i] === "") {
+			if (list1[i] === '') {
+				console.log('remove');
 				document.getElementById(list[i]).classList.add("hide");
 			} else {
 				document.getElementById(list[i]).classList.remove("hide");
