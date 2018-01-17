@@ -1,4 +1,4 @@
-var shake1 = 0;
+var shake1 = 10;
 var shake2 = 0;
 var mousex = 0;
 var mousey = 0;
@@ -19,7 +19,6 @@ function bounce() {
 	ball.classList.add("pingpongballmove");
 	ball.style.left = (pointer.getBoundingClientRect().left-ball.getBoundingClientRect().width/2)*1.6+'px';
 	ball.style.top = (pointer.getBoundingClientRect().top+pointer.getBoundingClientRect().top-bh-ball.getBoundingClientRect().height)+'px';
-	//return [dif, (dif*1.6)]
 }
 function caleb() {
 	bounce();
