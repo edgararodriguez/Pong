@@ -20,9 +20,11 @@ function stop() {
 function hitzone(x, y) {
 	var ball = document.getElementById('ball');
 	var mid = ball.getBoundingClientRect().width/2;
-	var boundR = x+70;
-	var boundB = y+70;
-	if (ball.getBoundingClientRect().left+mid > x && ball.getBoundingClientRect().left+mid < boundR && ball.getBoundingClientRect().top+mid > y && ball.getBoundingClientRect().top+mid < boundB) {
+	var boundL = x+10;
+	var boundT = y+10;
+	var boundR = boundL+50;
+	var boundB = boundT+50;
+	if (ball.getBoundingClientRect().left+mid > boundL && ball.getBoundingClientRect().left+mid < boundR && ball.getBoundingClientRect().top+mid > boundT && ball.getBoundingClientRect().top+mid < boundB) {
 		return (true);
 	} else {
 		return (false);
@@ -44,6 +46,7 @@ function edgar(){
 		if (hitzone(document.getElementById(list[i]).getBoundingClientRect().left, document.getElementById(list[i]).getBoundingClientRect().top) === true) {
 			spec = true
 			remove(list[i],(i));
+			break;
 		}
 	}
 	if (spec === false) {
