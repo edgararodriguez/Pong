@@ -35,6 +35,7 @@ body {
   transform: scale(.5, .5) !important; 
 }
 .pingpongball{
+  z-index: 1;
   height: 100px;
   width: 100px;
   position: fixed;
