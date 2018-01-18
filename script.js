@@ -62,9 +62,29 @@ function endround() {
 	document.getElementById('ball').style.left = 100+'px';
 	document.getElementById('ball').classList.remove('pingpongballmove');
 	if (player === 1) {
+		var check = 0;
+		for (i=0; i<list1.length; i++) {
+			if (list1[i] === "") {
+				check = check + 1;
+			}
+		}
+		if (check === 10) {
+			alert("Player 1 wins");
+			location.reload();
+		}
 		player = 2;
 		shake = shake2;
 	} else {
+		var check = 0;
+		for (i=0; i<list2.length; i++) {
+			if (list2[i] === "") {
+				check = check + 1;
+			}
+		}
+		if (check === 10) {
+			alert("Player 2 wins");
+			location.reload();
+		}
 		shake = shake1;
 		player =1
 	}
@@ -74,22 +94,22 @@ function endround() {
 function setup() {
 	if (player === 1) {
 		for (i=0; i<list1.length; i++) {
-			if (list1[i] === '') {
-				document.getElementById(list[i]).classList.add("hide");
-			} else {
-				document.getElementById(list[i]).classList.remove("hide");
+				if (list1[i] === '') {
+					document.getElementById(list[i]).classList.add("hide");
+				} else {
+					document.getElementById(list[i]).classList.remove("hide");
+				}
 			}
-		}
 	} else {
-		for (i=0; i<list2.length; i++) {
-			if (list2[i] === "") {
-				document.getElementById(list[i]).classList.add("hide");
-			} else {
-				document.getElementById(list[i]).classList.remove("hide");
+			for (i=0; i<list2.length; i++) {
+				if (list2[i] === "") {
+					document.getElementById(list[i]).classList.add("hide");
+				} else {
+					document.getElementById(list[i]).classList.remove("hide");
+				}
 			}
 		}
 	}
-}
 function remove(cup, cupnumber) {
 	document.getElementById(cup).classList.add("hide");
 	if(player === 1) {
