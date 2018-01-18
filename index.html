@@ -9,12 +9,10 @@
 <body>
   <div class="pointerArea" onmouseover="start = setInterval(function move() {
 	var pointer = document.getElementById('pointer');
-	var x = mousex + (((Math.random()-.5)*2)*(shake1));
-    var y = mousey + (((Math.random()-.5)*2)*(shake1));
+	var x = mousex + (((Math.random()-.5)*2)*(shake));
+    var y = mousey + (((Math.random()-.5)*2)*(shake));
     pointer.style.left = x +'px';
-    pointer.style.top = y +'px';
-    console.log()
-},1)"  onmouseout="clearInterval(start)" onmousemove="follow()" onclick="caleb()">
+    pointer.style.top = y +'px';},1)"  onmouseout="clearInterval(start)" onmousemove="follow()" onclick="caleb()">
   	<div id="pointer">
     </div>
   </div>
